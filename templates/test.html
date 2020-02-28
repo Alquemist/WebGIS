@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+            <link rel="stylesheet" href="\WebGisApp\Bootstrap4\css\bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+            <script src="\WebGisApp\Bootstrap4\js\bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" href="\WebGisApp\Bootstrap4\css\custom.css" >
+            <title>WebGIS</title>
+        </head>
+
+<!---AIzaSyCLbaZpLQlVHWyMmRbST3wUnuPt7gdzxIU-->
+
+<body>
+
+<div class="container-fluid main_container">
+    <div class="row map_row">
+        <div class="col-md-2 colored_row tekst">
+            <p>Lijevi red</p>
+        </div>
+
+
+        <div class="container col-md-9">
+            <div class="map" id="map"></div>
+        </div>
+    </div>
+
+
+    <div class="row bottom_row">
+        <p>Donji sam</p>
+    </div>
+</div>
+
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 44.397, lng: 17.644},
+            zoom: 8
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLbaZpLQlVHWyMmRbST3wUnuPt7gdzxIU&callback=initMap">
+</script>
+
+</body>
+</html>

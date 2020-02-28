@@ -1,0 +1,117 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <link rel="stylesheet" href="{% static 'Bootstrap4\css\bootstrap.min.css' %}"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="{% static 'Bootstrap4\js\bootstrap.min.js' %}"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'libs\easy-autocomplete.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Bootstrap4\css\custom.css' %}">
+    <title>WebGIS</title>
+</head>
+
+<!---AIzaSyCLbaZpLQlVHWyMmRbST3wUnuPt7gdzxIU-->
+
+<body>
+
+<div class="container-fluid main_container">
+    <div class="row map_row">
+        <div class="col-md-2 colored_row tekst">  <!---<p>Lijevi red</p>-->
+            <div class="form-group">
+                <label for="bazna">Pretraži baznu:</label>
+                <input type="text" class="form-control" id="bazna">
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    Naziv:
+                </div>
+                <div class="col-sm-6" id="name">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    Cell ID:
+                </div>
+                <div class="col-sm-6" id="cell_id">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    Azimut:
+                </div>
+                <div class="col-sm-6" id="azimuth">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    Snaga:
+                </div>
+                <div class="col-sm-6" id="pow">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    lon (x):
+                </div>
+                <div class="col-sm-6" id="lon">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    lat (y):
+                </div>
+                <div class="col-sm-6" id="lat">
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 float-right">
+                <button class="btn btn-primary butt1" id="lock" type="button">Zaključaj</button>
+            </div>
+            <br>
+            <br>
+
+            <div class="col-md-12 with_border cell_list" id="parent"> <!--kontejner za listu selektovanih baznih -->
+
+            </div> <!--end lista selektovanih baznih -->
+            <br>
+            <div class="col-sm-6 float-right">
+                <button class="btn btn-primary butt2" id="removeAll" type="button">Ukloni sve</button>
+            </div>
+
+        </div> <!--Lijevi red -->
+
+
+        <div class="col-md-10 mapa" id="map"></div>
+
+    </div>
+
+
+    <div class="row bottom_row">
+        <p>Donji sam</p>
+    </div>
+</div>
+{% csrf_token %}
+
+<script src="{% static 'js/mapInit.js' %}"></script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLbaZpLQlVHWyMmRbST3wUnuPt7gdzxIU&callback=initMap">
+</script>
+<script defer src="{% static 'js/myscript3.js' %}"></script>
+<script src="{% static 'libs/jquery.easy-autocomplete.min.js' %}"></script>
+
+
+</body>
+</html>

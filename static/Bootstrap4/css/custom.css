@@ -1,0 +1,130 @@
+
+body, html, .main_container {
+    height: 100%;
+}
+
+.tekst {
+    color: lightblue;
+    /*color: #bfcad9;*/
+}
+
+.colored_row {
+    background: #1d1e26;
+}
+
+.mapa {
+    height: 100%;
+      }
+
+.map_row {
+    height: 85%;
+}
+
+.bottom_row {
+    height: 15%;
+}
+
+.no-gutters {
+    padding-left: 0;
+  }
+
+.longtext {
+    word-wrap: break-word;
+    width: 1px;
+    min-width: 100%;
+}
+
+.with_border {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    /*border-color: lightblue;*/
+}
+
+.cell_list {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+/*}*/
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #4f5359;
+    -webkit-box-shadow: inset 0 0 6px #1D1E26;
+}
+/*::-webkit-scrollbar-thumb:window-inactive {
+	background: lightblue;
+}*/
+
+/*::-webkit-scrollbar-thumb::selection {
+	background: lightblue;
+}*/
+
+.hide_me {
+    visibility: hidden;
+    display: none;
+}
+
+.btn-primary {
+    background-color: #4f5359;
+    border-color: lightblue;
+}
+
+.btn-primary:hover {
+    background-image:none;
+    background-color:#5d768c;
+    border-color: #95acbf
+}
+
+.butt1 .butt2 {
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    max-width: 100px;
+    min-width: 55px;
+    background-color: lightblue;
+}
+
+.butt1 {
+    font-size: small;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.butt2 {
+    font-size: x-small;
+    padding-left: 2%;
+    padding-right: 2%;
+    min-width: 65px;
+}
+
+
